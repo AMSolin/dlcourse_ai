@@ -45,7 +45,7 @@ def load_svhn(folder, max_train, max_test):
     return train_X, train_y, test_X, test_y
 
 
-def random_split_train_val(X, y, num_val, seed=42):
+def random_split_train_val(X, y, num_val, seed=35):
     '''
     Randomly splits dataset into training and validation
     
