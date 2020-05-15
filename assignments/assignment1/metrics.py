@@ -13,32 +13,6 @@ def binary_classification_metrics(prediction, ground_truth):
     recall = 0
     accuracy = 0
     f1 = 0
-    
-    TP = 0
-    FP = 0
-    FN = 0
-    TN = 0
-    
-    num_labels = prediction.shape[0]
-    
-    for i in range(num_labels):
-        if prediction[i] == ground_truth[i]:
-            if prediction[i] == True:
-                TP += 1
-            else:
-                TN += 1
-        else:
-            if prediction[i] == False:
-                FN += 1
-            else:
-                FP += 1
-         
-    precision = TP / (TP + FP)
-    recall = TP / (TP + FN)
-    accuracy = (TP + TN) / num_labels
-    f1 = 2 * precision * recall / (precision + recall)
-                
-    
 
     # TODO: implement metrics!
     # Some helpful links:
