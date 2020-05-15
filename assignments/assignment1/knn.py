@@ -115,8 +115,8 @@ class KNN:
         for i in range(num_test):
             #min_dist_indx = np.argmin(dists[i])
             #pred[i] = True if self.train_y[min_dist_indx] == 0 else False
-            min_dist_ind = np.argpartition(dists[i], self.k)[:self.k]
-            #min_dist_ind = np.argsort(dists[i])[:self.k]
+            #min_dist_ind = np.argpartition(dists[i], self.k)[:self.k]
+            min_dist_ind = np.argsort(dists[i])[:self.k]
             counts_label = np.bincount(self.train_y[min_dist_ind])
             pred[i] = True if np.argmax(counts_label)  == 1 else False
         return pred
@@ -139,5 +139,7 @@ class KNN:
         for i in range(num_test):
             # TODO: Implement choosing best class based on k
             # nearest training samples
-            pass
+            min_dist_ind = np.argsort(dists[i])[:self.k]
+            counts_label = np.bincount(self.train_y[min_dist_ind])
+            pred[i] = np.argmax(counts_label)
         return pred
