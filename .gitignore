@@ -1,1 +1,14 @@
 .DS_Store
+*.pyc
+*.pyc
+*.mat
+*.pyc
+*.pyc
+*.pyc
+assignments/assignment1/__pycache__/knn.cpython-37.pyc
+*.pyc
+assignments/assignment1/.ipynb_checkpoints/Linear classifier-checkpoint.ipynb
+assignments/assignment1/.ipynb_checkpoints/KNN-checkpoint.ipynb
+assignments/assignment1/.ipynb_checkpoints/KNN-checkpoint.ipynb
+*.pyc
+assignments/assignment1/.ipynb_checkpoints/KNN-checkpoint.ipynb
